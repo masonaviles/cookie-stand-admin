@@ -8,14 +8,14 @@ export default function ReportTable(props) {
                 <thead>
                     <tr>
                         <th className="border border-black">Location</th>
-                        {hours.map(item => <th className="border border-black" key={item}>{item}</th>)}
+                        {hours.map(hour => <th className="border border-black" key={hour}>{hour}</th>)}
                     </tr>
                 </thead>
                 <tbody>
                 {props.stand.map((stand) => (
-                    <tr className="pl-2 pr-2 bg-green-500 border border-green" key={stand.location}>
+                    <tr className="pl-2 pr-2 bg-green-200 border border-black" key={stand.location}>
                         <td>{stand.location}</td>
-                        {stand.hours.map((hour) => <td className="pl-2 pr-2 bg-green-500 border border-green">{hour}</td>)}
+                        {/* {stand.hours.map(hour => <td className="pl-2 pr-2 bg-green-200 border border-black">{hour}</td>)} */}
                     </tr>
                 ))}
                 </tbody>
