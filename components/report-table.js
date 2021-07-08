@@ -15,7 +15,7 @@ export default function ReportTable(props) {
                 {props.stand.map((stand) => (
                     <tr className="pl-2 pr-2 bg-green-200 border border-black" key={stand.location}>
                         <td>{stand.location}</td>
-                        {/* {stand.hours.map(hours => <td key={hours} className="pl-2 pr-2 bg-green-200 border border-black">{hours}</td>)} */}
+                        {stand.hourly_sales.map(sales => <td key={sales} className="pl-2 pr-2 bg-green-200 border border-black">{sales}</td>)}
                     </tr>
                 ))}
                 </tbody>

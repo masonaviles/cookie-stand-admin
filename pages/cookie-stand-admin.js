@@ -17,6 +17,7 @@ export default function CookieStandAdmin() {
         standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
         standInfo.avgCookies = parseFloat(event.target.avgCookies.value);
 
+        standInfo.hourly_sales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36];
         setStand([...stand, standInfo]);
     }
 
