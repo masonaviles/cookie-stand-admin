@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from '../components/header'
 import CreateForm from '../components/create-form'
 import ReportTable from '../components/report-table'
 import { useState } from 'react'
@@ -23,12 +24,7 @@ export default function CookieStandAdmin() {
                 <Head>
                     <title>Cookie Stand Admin</title>
                 </Head>
-                <header className="p-6 bg-green-500">
-                    <h1 className="text-2xl font-semibold">Cookie Stand Admin</h1>
-                    <nav>
-                        <a href="">Overview</a>
-                    </nav>
-                </header>
+                <Header/>
                 <main>
                     <CreateForm/>
                     <ReportTable/>

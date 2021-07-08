@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 export default function CreateForm(props) {
+
+    const [stand, setStand] = useState({ "status": "pending" });
 
     function submitHandler(event) {
         event.preventDefault();
@@ -7,8 +11,8 @@ export default function CreateForm(props) {
         standInfo.minCustomers = parseInt(event.target.minCustomers.value);
         standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
         standInfo.avgCookies = parseFloat(event.target.avgCookies.value);
-        standInfo.hourlySales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]
-        props.onStandCreate(standInfo)
+
+        setStand(standInfo);
     }
 
     return (
