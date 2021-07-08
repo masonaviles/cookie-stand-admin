@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/header'
 import CreateForm from '../components/create-form'
 import ReportTable from '../components/report-table'
+import Blank from '../components/blank'
 import Footer from '../components/footer'
 import { useState } from 'react'
 
@@ -23,10 +24,10 @@ export default function CookieStandAdmin() {
     }
 
     let tableView;
-    if (standInfo) {
+    if (standInfo.length > 1) {
         tableView = <ReportTable stand={stand}/>;
     } else {
-        tableView  = <div><h3>None</h3></div>;
+        tableView  = <Blank/>;
     }
 
     return (
