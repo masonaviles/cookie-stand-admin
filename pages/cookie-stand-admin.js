@@ -7,11 +7,12 @@ import { useState } from 'react'
 
 export default function CookieStandAdmin() {
 
+    const standInfo = {};
     const [stand, setStand] = useState([]);
 
     function submitHandler(event) {
         event.preventDefault();
-        const standInfo = {};
+        // const standInfo = {};
         standInfo.location = event.target.location.value;
         standInfo.minCustomers = parseInt(event.target.minCustomers.value);
         standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
@@ -19,6 +20,13 @@ export default function CookieStandAdmin() {
 
         standInfo.hourly_sales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36];
         setStand([...stand, standInfo]);
+    }
+
+    let tableView;
+    if (standInfo) {
+        tableView = <ReportTable stand={stand}/>;
+    } else {
+        tableView  = <div><h3>None</h3></div>;
     }
 
     return (
@@ -29,7 +37,7 @@ export default function CookieStandAdmin() {
                 <Header/>
                 <main>
                     <CreateForm submitHandler={submitHandler}/>
-                    <ReportTable stand={stand}/>
+                    {tableView}
                 </main>
                 <Footer/>
             </div>
