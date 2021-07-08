@@ -4,7 +4,7 @@ export default function ReportTable() {
 
     return (
         <>
-            <table className="">
+            <table className="w-2/3 py-2 mx-auto my-8 bg-green-200">
             <thead>
                 <tr>
                     <th className="border border-black">Location</th>
