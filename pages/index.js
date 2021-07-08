@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 export default function CookieStandAdmin() {
 
-    const [stand, setStand] = useState({ "status": "pending" });
+    const [stand, setStand] = useState([]);
 
     function submitHandler(event) {
         event.preventDefault();
@@ -17,7 +17,7 @@ export default function CookieStandAdmin() {
         standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
         standInfo.avgCookies = parseFloat(event.target.avgCookies.value);
 
-        setStand(standInfo);
+        setStand([...stand, standInfo]);
     }
 
     return (
@@ -28,7 +28,7 @@ export default function CookieStandAdmin() {
                 <Header/>
                 <main>
                     <CreateForm submitHandler={submitHandler}/>
-                    <ReportTable/>
+                    <ReportTable stand={stand}/>
                 </main>
                 <Footer/>
             </div>
