@@ -2,24 +2,11 @@ import { useState } from 'react'
 
 export default function CreateForm(props) {
 
-    const [stand, setStand] = useState({ "status": "pending" });
-
-    function submitHandler(event) {
-        event.preventDefault();
-        const standInfo = {};
-        standInfo.location = event.target.location.value;
-        standInfo.minCustomers = parseInt(event.target.minCustomers.value);
-        standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
-        standInfo.avgCookies = parseFloat(event.target.avgCookies.value);
-
-        setStand(standInfo);
-    }
-
     return (
         <>
             <form 
                 className="w-2/3 py-2 mx-auto my-8 bg-green-200" 
-                onSubmit={submitHandler}>
+                onSubmit={props.submitHandler}>
                 <fieldset className="w-full p-2">
                     <legend className="text-xl font-semibold text-center">Create Cookie Stand</legend>
                     <div className="flex">

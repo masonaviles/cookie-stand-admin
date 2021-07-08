@@ -27,7 +27,7 @@ export default function CookieStandAdmin() {
                 </Head>
                 <Header/>
                 <main>
-                    <CreateForm/>
+                    <CreateForm submitHandler={submitHandler}/>
                     <ReportTable/>
                 </main>
                 <Footer/>
