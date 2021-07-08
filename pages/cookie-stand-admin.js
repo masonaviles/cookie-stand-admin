@@ -8,12 +8,11 @@ import { useState } from 'react'
 
 export default function CookieStandAdmin() {
 
-    const standInfo = {};
     const [stand, setStand] = useState([]);
 
     function submitHandler(event) {
         event.preventDefault();
-        // const standInfo = {};
+        const standInfo = {};
         standInfo.location = event.target.location.value;
         standInfo.minCustomers = parseInt(event.target.minCustomers.value);
         standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
@@ -24,7 +23,7 @@ export default function CookieStandAdmin() {
     }
 
     let tableView;
-    if (standInfo.length > 1) {
+    if (stand.length > 0) {
         tableView = <ReportTable stand={stand}/>;
     } else {
         tableView  = <Blank/>;
