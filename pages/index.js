@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/header'
 import CreateForm from '../components/create-form'
 import ReportTable from '../components/report-table'
+import Footer from '../components/footer'
 import { useState } from 'react'
 
 export default function CookieStandAdmin() {
@@ -29,9 +30,7 @@ export default function CookieStandAdmin() {
                     <CreateForm/>
                     <ReportTable/>
                 </main>
-                <footer className="py-6 pl-6 bg-green-500">
-                    <p>&copy; 2021</p>
-                </footer>
+                <Footer/>
             </div>
     )
 }
