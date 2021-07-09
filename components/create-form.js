@@ -10,10 +10,10 @@ export default function CreateForm(props) {
                 <fieldset className="w-full p-2">
                     <legend className="text-xl font-semibold text-center">Create Cookie Stand</legend>
                     <div className="flex">
-                        <label className="" htmlFor="location">Location</label>
+                        <label className="mr-2" htmlFor="location">Location</label>
                         <input className="flex-auto" id="location" name="location" type="text" />
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 mt-4">
 
                         <div className="flex-1">
                             <label htmlFor="min-customers">Minimum Customers per Hour</label>

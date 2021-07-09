@@ -39,7 +39,7 @@ export default function CookieStandAdmin() {
                     <CreateForm submitHandler={submitHandler}/>
                     {tableView}
                 </main>
-                <Footer/>
+                <Footer numOfLocations={stand.length}/>
             </div>
     )
 }
